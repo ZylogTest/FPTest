@@ -57,7 +57,7 @@ namespace FPSample.Tests.Controllers
         public void AddTest()
         {
             int result = controller.Add(20, 10);
-            Assert.AreEqual(40, result);
+            Assert.AreEqual(30, result);
         }
         [TestMethod]
         public void SubtractTest()
