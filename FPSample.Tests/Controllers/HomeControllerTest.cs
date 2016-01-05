@@ -12,11 +12,14 @@ namespace FPSample.Tests.Controllers
     [TestClass]
     public class HomeControllerTest
     {
+
+        HomeController controller = new HomeController();
+
         [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+           
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -42,7 +45,6 @@ namespace FPSample.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController();
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;
@@ -50,5 +52,19 @@ namespace FPSample.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void AddTest()
+        {
+            int result = controller.Add(20, 10);
+            Assert.AreEqual(40, result);
+        }
+        [TestMethod]
+        public void SubtractTest()
+        {
+            int result = controller.Subtract(20, 10);
+            Assert.AreEqual(10, result);
+        }
+
     }
 }

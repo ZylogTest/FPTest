@@ -10,6 +10,8 @@ namespace FPSample.Controllers
     {
         public ActionResult Index()
         {
+            int AddResult = Add(20, 40);
+            int SubtractResult = Subtract(50, 20);
             return View();
         }
 
@@ -26,5 +28,20 @@ namespace FPSample.Controllers
 
             return View();
         }
+
+        public int Add(int a, int b)
+        {
+            int x = a + b;
+            return x;
+
+        }
+
+        public int Subtract(int a, int b)
+        {
+            int x = a - b;
+            return x;
+        }
+
+
     }
 }
